@@ -29,8 +29,8 @@ class CarlaDriver:
         # 防抖标记
         self.w_key_triggered = [False]
         self.c_key_triggered = [False]
-        self.r_key_triggered = [False]
-        self.initial_spawn_point = None
+        self.r_key_triggered = [False]  # 新增：R键防抖标记
+        self.initial_spawn_point = None  # 新增：存储初始生成点
         # 注册退出信号
         signal.signal(signal.SIGINT, self.handle_exit)
         signal.signal(signal.SIGTERM, self.handle_exit)
@@ -79,7 +79,7 @@ class CarlaDriver:
         carla_map = world.get_map()
         spawn_point = carla_map.get_spawn_points()[0]
         spawn_point.location -= spawn_point.get_forward_vector() * SPAWN_POINT_OFFSET
-        self.initial_spawn_point = spawn_point
+        self.initial_spawn_point = spawn_point  # 新增：保存初始生成点
 
         try:
             car_bp = world.get_blueprint_library().filter("vehicle")[0]
