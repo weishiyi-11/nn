@@ -95,8 +95,8 @@ class DriverVitalsMonitor:
         )
         self.current_blood_pressure = (round(new_sys), round(new_dia))
 
-        # 时间流速 ×50 倍
-        time_fatigue = driving_duration * VITALS_TIME_FACTOR["fatigue"] * 50
+        # 时间流速 ×10 倍
+        time_fatigue = driving_duration * VITALS_TIME_FACTOR["fatigue"] * 10
         weather_fatigue = time_fatigue * weather_factor
         collision_fatigue = self.last_collision_speed * 0.3 if collision_occurred else 0
 
