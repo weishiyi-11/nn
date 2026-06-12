@@ -1,18 +1,4 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191110102MACQD9K64018705
-    ProduceID: 142305146964284_0-data_volume/7649677419162616127-files/所有对话/主对话/网联车仿真README/README.md
-    ReservedCode1: ""
-    ContentPropagator: 001191110102MACQD9K64028705
-    PropagateID: 142305146964284#1781255262486
-    ReservedCode2: ""
----
 # 🚗 网联车智慧城市仿真系统
-
-<p align="center">
-  <img src="docs/images/cover.jpg" alt="课程论文封面" width="60%">
-</p>
 
 > 基于 **CARLA 0.9.14+** 仿真平台，集成车辆控制、碰撞检测、红绿灯违规识别、动态天气模拟、驾驶员生命体征监测及可视化 GUI 监控的自动驾驶仿真系统。
 >
